@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        @import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
+        body{
+            text-align:center;
+        }
+        h1{
+            color:rgb(91, 141, 235);
+            margin-top:10%;
+            margin-bottom:8%;
+        }
+        h2{
+            color:rgb(86, 86, 209);
+            margin-top:5%;
+        }
+        
+    </style>
+</head>
+<h1>당신이 입력한 테스트는 {{total}}개로 구성되어 있습니다. </h1>
+
+<a href="{%url 'home' %}">다시 하기</a>
+<br>
+<h2>입력 텍스트 : </h2>
+{{full}}
+
+<h2>단어 카운트 : </h2>
+{% for word, num in dictionary %}
+
+{{word}} : {{num}}
+<br>
+{% endfor %}

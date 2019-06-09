@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        @import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
+        body{
+            text-align:center;
+        }
+        h1{
+            color:rgb(91, 141, 235);
+            margin-top:10%;
+            margin-bottom:8%;
+        }
+       textarea{
+           margin-top:5%;
+           margin-bottom:5%;
+       }
+
+    </style>
+</head>
+<body>
+    <h1> 안녕하세요, 여기서 글자를 세세요! </h1>
+
+    <a href="{%url 'about'%}">ABOUT</a>
+
+    <form action="{%url 'result' %}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br>
+        <input type="submit" value="Count!">
+    </form>
+</body>
